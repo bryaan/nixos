@@ -25,16 +25,16 @@
       "guest_additions_mode": "disable",
       "guest_os_type": "Linux_64",
       "http_directory": "nixos",
-      "iso_checksum": "48395b4bd21675703c87cfae1feb68ed",
-      "iso_checksum_type": "md5",
-      "iso_url": "http://releases.nixos.org/nixos/unstable/nixos-14.02pre38596.1dd0e05/nixos-minimal-14.02pre38596.1dd0e05-x86_64-linux.iso",
+      "iso_checksum": "0cda1e3aea3f613102ab661f703ac8e81735a43abca38d5f5872686fda7f1fa1",
+      "iso_checksum_type": "sha256",
+      "iso_url": "~/Downloads/nixos-graphical-17.09.2631.0653b73bf61-x86_64-linux.iso",
       "shutdown_command": "sudo shutdown -h now",
       "ssh_username": "root",
       "ssh_key_path": "keys/vagrant.key",
       "ssh_wait_timeout": "20m",
       "virtualbox_version_file": ".vbox_version",
       "vboxmanage": [
-        ["modifyvm", "{{.Name}}", "--memory", "1024"],
+        ["modifyvm", "{{.Name}}", "--memory", "2048"],
         ["modifyvm", "{{.Name}}", "--cpus", "2"]
       ]
     }
@@ -49,7 +49,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "nixos-14.02-x86_64-{{.Provider}}.box"
+      "output": "nixos-17.09-x86_64-{{.Provider}}.box"
     }
   ]
 }
